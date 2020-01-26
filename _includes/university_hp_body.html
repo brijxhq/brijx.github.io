@@ -1,0 +1,36 @@
+<body class="header-sticky">
+    {% if jekyll.environment == "production" %}
+        {% include gtag2.html %}
+    {% endif %}
+
+    <div class="boxed">
+
+        <div class="menu-hover">
+            <div class="btn-menu">
+                <span></span>
+            </div><!-- //mobile menu button -->
+        </div>
+
+        {% if jekyll.environment == "production" %}
+            {% include university_header_inner.html %}
+        {% endif %}
+
+        {% include university_header.html %}
+        
+        {% include university_hp_body_section1.html %}
+        {% if jekyll.environment == "production" %}
+            {% include university_hp_body_section2.html %}
+            {% include university_hp_body_section3.html %}
+            {% include university_hp_body_section4.html %}
+            {% include university_hp_body_section5.html %}
+            {% include university_hp_body_section6.html %}
+            {% include university_hp_body_section7.html %}
+            {% include university_hp_body_section8.html %}
+        {% endif %}
+
+        {% include university_footer.html %}
+
+        {% include university_js.html %}
+
+    </div>
+</body>
